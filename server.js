@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 const apiRoutes = require('./routes')
-app.use('/api/v1/users', apiRoutes)
+app.use('/api/v1/', apiRoutes)
 
 app.listen(port, () => {
     console.log('server is running');

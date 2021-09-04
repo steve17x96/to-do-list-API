@@ -10,11 +10,6 @@ var User = function(user){
     this.isblocked = user.isblocked ? user.isblocked : 1;
 };
 
-var List = function(list){
-    this.activity = list.activity;
-    this.Date = new Date();
-    this.status = list.status;
-};
 
 User.create = function (newUsr, result){
     db_conn.query("INSERT INTO user set ?", newUsr, function (err, res) {
@@ -55,7 +50,7 @@ User.findAll = function (result){
     });
 };
 
-User.update = function(id, user, res){
+User.update = function(id, user, result){
     db_conn.query("UPDATE user SET email = ?, password = ?, username = ?, firstName = ?, lastName = ? WHERE userID = ?",
     [user.email, user.password, user.username ,user.firstName, user.lastName, id], function(err,res){
         if(err){
