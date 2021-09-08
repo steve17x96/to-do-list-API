@@ -1,0 +1,16 @@
+{
+  "name": "To-do List API Documentation",
+  "version": "0.1.0",
+  "description": "To-do list API requests",
+  "title": "To-do list app",
+  "useHostUrlAsSampleUrl": true,
+  "sampleUrl": true,
+  "defaultVersion": "0.0.0",
+  "apidoc": "0.3.0",
+  "generator": {
+    "name": "apidoc",
+    "time": "2021-09-06T15:00:24.882Z",
+    "url": "https://apidocjs.com",
+    "version": "0.29.0"
+  }
+}
