@@ -2,6 +2,7 @@ var db_conn = require('./config/db_config');
 
 var List = function(list){
     this.activity = list.activity;
+    this.photo = list.photo;
     this.date = list.date;
     this.status = list.status;
     this.createdate = new Date();
@@ -47,8 +48,8 @@ List.getAll = function (result){
 };
 
 List.updateByID = function(id, list, result){
-    db_conn.query("UPDATE list SET activity = ?, date = ?, status = ? WHERE listID = ?",
-    [list.activity, list.date, list.status, id], function(err,res){
+    db_conn.query("UPDATE list SET activity = ?, photo = ?, date = ?, status = ? WHERE listID = ?",
+    [list.activity, list.photo , list.date, list.status, id], function(err,res){
         if(err){
             console.log("error: ", err);
             result(null, err);
