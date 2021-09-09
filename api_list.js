@@ -9,7 +9,7 @@ var List = function(list){
 };
 
 List.create_list = function (newList, result){
-    db_conn.query("INSERT INTO list set activity = ?", newList, function (err, res) {
+    db_conn.query("INSERT INTO list set ?", newList, function (err, res) {
         if(err){
             console.log("error: ", err);
             result(err, null);
